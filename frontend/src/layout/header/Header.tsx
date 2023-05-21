@@ -1,7 +1,17 @@
+import { styled } from '@mui/system';
+import Box from '@mui/material/Box';
+import NightModeToggle from '../../components/NightModeToggle';
+
+const HeaderBox = styled(Box)(() => ({
+  height: '10vh',
+  width: '100vw',
+}));
 export const Header = () => {
-  return(
-    <>
-    Header
-    </>
+
+  return (
+    <HeaderBox>
+                  <NightModeToggle />
+
+    </HeaderBox>
   )
 }
