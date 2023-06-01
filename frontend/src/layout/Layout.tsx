@@ -8,29 +8,35 @@ import { Header } from "./header/Header"
 const Layout = () => {
   const ContentBox = styled(Box)(() => ({
     minHeight: '80vh',
-    width: '100vw',
+    width: '100%',
+    paddingTop:"20px"
+  }));
+  const PageBox = styled(Box)(() => ({
+    minHeight: '100vh',
+    width: '100%',
   }));
   return (
-
-    <Box>
-      <Grid container  >
+ 
+  
+    <PageBox>
+      <Grid container p={2} >
         <Grid item xs={12}  >
           <Header />
         </Grid>
-        <Grid item xs={12} >
           <ContentBox>
+        <Grid item xs={12} >
             <Grid container  >
-              <Grid item xs={6} >
+              <Grid item xs={12} >
                 <Outlet />
               </Grid>
             </Grid>
-          </ContentBox>
         </Grid>
+          </ContentBox>
         <Grid item xs={12} >
           <Footer />
         </Grid>
       </Grid>
-    </Box>
+    </PageBox>
   )
 }
 export default Layout;
